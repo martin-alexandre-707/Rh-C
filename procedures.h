@@ -3,23 +3,23 @@
 
 char nomeFuncionario[100][30];
 char cargoFuncionario[100][30];
-int idadeFuncionario[30], totalFuncionario = 0;
-float salarioFuncionario[30];
+int idadeFuncionario[100], totalFuncionario = 0;
+float salarioFuncionario[100];
 
 void cadastro(){
  setlocale(LC_ALL, "");
  system("cls");
-        printf("Digite o nome do funcionário que deseja cadastrar: \n");
+        printf("Digite o nome do funcionÃ¡rio que deseja cadastrar: \n");
             scanf(" %[^\n]", nomeFuncionario[totalFuncionario]);
-        printf("Digite o cargo do funcionário: \n");
+        printf("Digite o cargo do funcionÃ¡rio: \n");
             scanf(" %[^\n]", cargoFuncionario[totalFuncionario]);
-        printf("Digite a idade do funcionário: \n");
+        printf("Digite a idade do funcionÃ¡rio: \n");
             scanf("%d", &idadeFuncionario[totalFuncionario]);
-        printf("Digite o salário bruto do funcionário: \n");
+        printf("Digite o salÃ¡rio bruto do funcionÃ¡rio: \n");
             scanf("%f", &salarioFuncionario[totalFuncionario]);
             totalFuncionario++;
             system("cls");
-            printf("Funcionário cadastrado com sucesso!\n");
+            printf("FuncionÃ¡rio cadastrado com sucesso!\n");
             system("pause");
             system("cls");
 
@@ -28,9 +28,9 @@ void cadastro(){
 void listar(){
     setlocale(LC_ALL, "");
 system("cls");
-    printf("LISTA DE FUNCIONÁRIOS: \n");
+    printf("LISTA DE FUNCIONÃRIOS: \n");
     for(int i = 0;i < totalFuncionario; i++){
-        printf("Funcionário %d\nNome: %s\n Cargo: %s\n Idade: %d\n---------------\n",i+1, nomeFuncionario[i], cargoFuncionario[i], idadeFuncionario[i]);
+        printf("FuncionÃ¡rio %d\nNome: %s\n Cargo: %s\n Idade: %d\n---------------\n",i+1, nomeFuncionario[i], cargoFuncionario[i], idadeFuncionario[i]);
     }
         printf("\\\\\\\\\FIM DA LISTA\\\\\\\\\ \n");
         system("pause");
@@ -41,9 +41,9 @@ void taxas(){
 setlocale(LC_ALL, "");
 system("cls");
 printf(" ==========TAXABOOT 1.0========== \n\n");
-printf("Lista dos salários: \n");
+printf("Lista dos salÃ¡rios: \n");
 for(int i = 0;i < totalFuncionario; i++){
-    printf("Funcionário - %d\nNome: %s\nSalário bruto: R$%.2f\n",i+1, nomeFuncionario[i], salarioFuncionario[i]);
+    printf("FuncionÃ¡rio - %d\nNome: %s\nSalÃ¡rio bruto: R$%.2f\n",i+1, nomeFuncionario[i], salarioFuncionario[i]);
     printf("FGTS - %.2f\n", salarioFuncionario[i] * 0.08);
 
     if(salarioFuncionario[i] < 1519)
@@ -98,3 +98,4 @@ void ler_senha(char *senha, int max_len) {
     }
     senha[i] = '\0';
 }
+
